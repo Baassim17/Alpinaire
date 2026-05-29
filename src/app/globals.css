@@ -1,0 +1,48 @@
+@import "./altergeneva.css";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.Logo-module__root__FNsq2 svg {
+  display: none !important;
+}
+
+.Logo-module__root__FNsq2::before {
+  content: "ALPINAIRE";
+  display: block;
+  font-family: var(--font-secondary);
+  font-weight: 300;
+  line-height: 0.8;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: currentColor;
+}
+
+.Header-module__logo__Yh6Bo .Logo-module__root__FNsq2::before {
+  font-size: 54rem;
+}
+
+.WallTransition-module__logo__hv-iq::before {
+  font-size: 28rem;
+}
+
+.Loader-module__logo__35CEf::before {
+  font-size: 36rem;
+}
+
+@media (min-width: 768px) and (min-height: 500px) and (orientation: landscape) {
+  .Header-module__logo__Yh6Bo .Logo-module__root__FNsq2::before {
+    font-size: 120rem;
+  }
+
+  .WallTransition-module__logo__hv-iq::before {
+    font-size: 44rem;
+  }
+
+  .Loader-module__logo__35CEf::before {
+    font-size: 56rem;
+  }
+}

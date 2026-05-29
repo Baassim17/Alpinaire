@@ -1,0 +1,29 @@
+import type { Metadata } from "next";
+import "./globals.css";
+
+export const metadata: Metadata = {
+  title: "Alpinaire",
+  description:
+    "Alpinaire, the bespoke watchmaking studio. The ultimate luxury: making time your own",
+  metadataBase: new URL("https://www.altergeneva.com"),
+  icons: {
+    apple: "/favicon/apple-touch-icon.png",
+    icon: [
+      { url: "/favicon/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+    ],
+  },
+  manifest: "/favicon/site.webmanifest",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}
