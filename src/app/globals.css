@@ -21,6 +21,16 @@ body {
   background-size: contain;
 }
 
+/* Light theme black logo */
+.LogoHeader-module__root_light__k2-Kg .Logo-module__root__FNsq2::before {
+  background-image: url("/images/Alpinaire%20logo_blk.png") !important;
+}
+
+/* Dark theme white logo */
+.LogoHeader-module__root_dark__jvgVo .Logo-module__root__FNsq2::before {
+  background-image: url("/images/Alpinaire%20logo.png") !important;
+}
+
 .Header-module__logo__Yh6Bo .Logo-module__root__FNsq2 {
   width: 94rem !important;
   height: 94rem !important;
@@ -29,19 +39,54 @@ body {
 
 .Header-module__root_large__n2msR .Header-module__logo__Yh6Bo .Logo-module__root__FNsq2 {
   aspect-ratio: 1431 / 198;
-  width: min(720rem, 88vw) !important;
+  width: min(840rem, 94vw) !important;
   height: auto !important;
 }
 
-.Header-module__root_large__n2msR .Header-module__button__Sg5LL {
-  align-self: flex-end;
-  z-index: 2;
+@media (min-width: 768px) and (min-height: 500px) and (orientation: landscape) {
+  .Header-module__root_large__n2msR .Header-module__logo__Yh6Bo .Logo-module__root__FNsq2 {
+    width: min(1480rem, 80vw) !important;
+  }
 }
 
 .Header-module__root_large__n2msR .Header-module__logo__Yh6Bo {
-  align-self: flex-start;
-  justify-self: center;
+  grid-row: 2 !important;
+  grid-column: 1 / -1 !important;
+  justify-self: center !important;
+  align-self: flex-end !important;
 }
+
+.Header-module__root_large__n2msR .Header-module__button__Sg5LL {
+  grid-row: 1 !important;
+  align-self: flex-end !important;
+  z-index: 2;
+}
+
+.Header-module__root_large__n2msR .Header-module__button_menu__hOtrx {
+  grid-column: 1 / 5 !important;
+}
+
+.Header-module__root_large__n2msR .Header-module__button_cta__IQo0- {
+  grid-column: 13 / -1 !important;
+  margin-left: auto !important;
+}
+
+@media (min-width: 768px) and (min-height: 500px) and (orientation: landscape) {
+  .Header-module__root_large__n2msR .Header-module__logo__Yh6Bo {
+    grid-row: 1 !important;
+    grid-column: 7 / 29 !important;
+  }
+
+  .Header-module__root_large__n2msR .Header-module__button__Sg5LL {
+    grid-row: 1 !important;
+  }
+
+  .Header-module__root_large__n2msR .Header-module__button_cta__IQo0- {
+    grid-column: 30 / -1 !important;
+  }
+}
+
+
 
 .WallTransition-module__logo__hv-iq {
   width: 126rem !important;
@@ -78,18 +123,7 @@ body {
 /* Alpinaire footer legal links removal */
 .LegalInfos-module__list__mTmYH{display:none!important}
 
-/* Alpinaire hero media fallback */
-.HomeHero-module__root__X32-X,
-.HomeHero-module__background__-bq4K {
-  background-image: url("/images/Hero.png?v=alpinaire-hero-2") !important;
-  background-position: center !important;
-  background-size: cover !important;
-  background-repeat: no-repeat !important;
-}
 
-.HomeHero-module__backgroundImage__fqnu4 {
-  opacity: 0 !important;
-}
 
 /* Alpinaire legal notice popup removal */
 .LegalNotice-module__root__VD04x,
@@ -98,3 +132,21 @@ body {
   visibility: hidden !important;
   pointer-events: none !important;
 }
+
+/* Disable floating/sticky navigation completely */
+.Header-module__root_small__ho95C {
+  position: absolute !important;
+  background-color: transparent !important;
+  padding-top: 18rem !important;
+  padding-bottom: 18rem !important;
+  transform: none !important;
+  -webkit-transform: none !important;
+}
+
+@media (min-width: 768px) and (min-height: 500px) and (orientation: landscape) {
+  .Header-module__root_small__ho95C {
+    padding-top: 40rem !important;
+    padding-bottom: 40rem !important;
+  }
+}
+

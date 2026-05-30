@@ -7,8 +7,189 @@
 .LegalInfos-module__list__mTmYH{display:none!important}
 
 /* Alpinaire hero media fallback */
-.HomeHero-module__root__X32-X,.HomeHero-module__background__-bq4K{background-image:url("/images/Hero.png?v=alpinaire-hero-2")!important;background-position:center!important;background-size:cover!important;background-repeat:no-repeat!important}
-.HomeHero-module__backgroundImage__fqnu4{opacity:0!important}
+
+
 
 /* Alpinaire legal notice popup removal */
 .LegalNotice-module__root__VD04x,#legal-notice{display:none!important;visibility:hidden!important;pointer-events:none!important}
+
+/* Disable floating/sticky navigation completely */
+.Header-module__root_small__ho95C {
+  position: absolute !important;
+  background-color: transparent !important;
+  padding-top: 18rem !important;
+  padding-bottom: 18rem !important;
+  transform: none !important;
+  -webkit-transform: none !important;
+}
+
+@media (min-width: 768px) and (min-height: 500px) and (orientation: landscape) {
+  .Header-module__root_small__ho95C {
+    padding-top: 40rem !important;
+    padding-bottom: 40rem !important;
+  }
+}
+
+/* Light theme black logo */
+.LogoHeader-module__root_light__k2-Kg .Logo-module__root__FNsq2::before {
+  background-image: url("/images/Alpinaire%20logo_blk.png") !important;
+}
+
+/* Dark theme white logo */
+.LogoHeader-module__root_dark__jvgVo .Logo-module__root__FNsq2::before {
+  background-image: url("/images/Alpinaire%20logo.png") !important;
+}
+
+/* Perfect alignment of Logo and Menu/Your Project */
+.Header-module__root_large__n2msR .Header-module__button__Sg5LL {
+  align-self: center !important;
+  z-index: 2;
+}
+
+.Header-module__root_large__n2msR .Header-module__logo__Yh6Bo {
+  align-self: center !important;
+  justify-self: center;
+}
+
+/* Large header layouts: logo on top (row 1) and aligned menu buttons below (row 2) */
+.Header-module__root_large__n2msR .Header-module__logo__Yh6Bo .Logo-module__root__FNsq2 {
+  aspect-ratio: 1431 / 198;
+  width: min(840rem, 94vw) !important;
+  height: auto !important;
+}
+
+@media (min-width: 768px) and (min-height: 500px) and (orientation: landscape) {
+  .Header-module__root_large__n2msR .Header-module__logo__Yh6Bo .Logo-module__root__FNsq2 {
+    width: min(1180rem, 62vw) !important;
+  }
+}
+
+.Header-module__root_large__n2msR .Header-module__logo__Yh6Bo {
+  grid-row: 1 !important;
+  grid-column: 1 / -1 !important;
+  justify-self: center !important;
+  align-self: center !important;
+}
+
+.Header-module__root_large__n2msR .Header-module__button__Sg5LL {
+  grid-row: 2 !important;
+  align-self: center !important;
+  z-index: 2;
+}
+
+.Header-module__root_large__n2msR .Header-module__button_menu__hOtrx {
+  grid-column: 1 / 5 !important;
+}
+
+.Header-module__root_large__n2msR .Header-module__button_cta__IQo0- {
+  grid-column: 13 / -1 !important;
+  margin-left: auto !important;
+}
+
+@media (min-width: 768px) and (min-height: 500px) and (orientation: landscape) {
+  .Header-module__root_large__n2msR .Header-module__button_cta__IQo0- {
+    grid-column: 30 / -1 !important;
+  }
+}
+
+/* Inner-page Alpinaire header alignment */
+.Header-module__root_default__ud4Or,
+.Header-module__root_open__e5Oz6,
+.Header-module__root_small__ho95C {
+  padding-top: 18rem !important;
+  padding-bottom: 18rem !important;
+}
+
+.Header-module__root_default__ud4Or .Header-module__wrapper__X6xs-,
+.Header-module__root_open__e5Oz6 .Header-module__wrapper__X6xs-,
+.Header-module__root_small__ho95C .Header-module__wrapper__X6xs- {
+  row-gap: 0 !important;
+  align-items: flex-end !important;
+}
+
+.Header-module__root_default__ud4Or .Header-module__logo__Yh6Bo,
+.Header-module__root_open__e5Oz6 .Header-module__logo__Yh6Bo,
+.Header-module__root_small__ho95C .Header-module__logo__Yh6Bo {
+  align-self: flex-end !important;
+  justify-self: center !important;
+}
+
+.Header-module__root_default__ud4Or .Header-module__logo__Yh6Bo .Logo-module__root__FNsq2,
+.Header-module__root_open__e5Oz6 .Header-module__logo__Yh6Bo .Logo-module__root__FNsq2,
+.Header-module__root_small__ho95C .Header-module__logo__Yh6Bo .Logo-module__root__FNsq2 {
+  aspect-ratio: 1431 / 198;
+  width: 188rem !important;
+  height: auto !important;
+  margin-inline: auto !important;
+}
+
+.Header-module__root_default__ud4Or .Header-module__button__Sg5LL,
+.Header-module__root_open__e5Oz6 .Header-module__button__Sg5LL,
+.Header-module__root_small__ho95C .Header-module__button__Sg5LL {
+  align-self: flex-end !important;
+}
+
+@media (min-width: 768px) and (min-height: 500px) and (orientation: landscape) {
+  .Header-module__root_default__ud4Or,
+  .Header-module__root_open__e5Oz6,
+  .Header-module__root_small__ho95C {
+    padding-top: 32rem !important;
+    padding-bottom: 32rem !important;
+  }
+
+  .Header-module__root_default__ud4Or .Header-module__logo__Yh6Bo .Logo-module__root__FNsq2,
+  .Header-module__root_open__e5Oz6 .Header-module__logo__Yh6Bo .Logo-module__root__FNsq2,
+  .Header-module__root_small__ho95C .Header-module__logo__Yh6Bo .Logo-module__root__FNsq2 {
+    width: 242rem !important;
+  }
+}
+
+/* Reposition large header: all on row 1 on desktop landscape, aligned to bottom edge/baseline */
+.Header-module__root_large__n2msR .Header-module__logo__Yh6Bo .Logo-module__root__FNsq2 {
+  aspect-ratio: 1431 / 198;
+  width: min(840rem, 94vw) !important;
+  height: auto !important;
+}
+
+@media (min-width: 768px) and (min-height: 500px) and (orientation: landscape) {
+  .Header-module__root_large__n2msR .Header-module__logo__Yh6Bo .Logo-module__root__FNsq2 {
+    width: min(1180rem, 62vw) !important;
+  }
+}
+
+.Header-module__root_large__n2msR .Header-module__logo__Yh6Bo {
+  grid-row: 2 !important;
+  grid-column: 1 / -1 !important;
+  justify-self: center !important;
+  align-self: flex-end !important;
+}
+
+.Header-module__root_large__n2msR .Header-module__button__Sg5LL {
+  grid-row: 1 !important;
+  align-self: flex-end !important;
+  z-index: 2;
+}
+
+.Header-module__root_large__n2msR .Header-module__button_menu__hOtrx {
+  grid-column: 1 / 5 !important;
+}
+
+.Header-module__root_large__n2msR .Header-module__button_cta__IQo0- {
+  grid-column: 13 / -1 !important;
+  margin-left: auto !important;
+}
+
+@media (min-width: 768px) and (min-height: 500px) and (orientation: landscape) {
+  .Header-module__root_large__n2msR .Header-module__logo__Yh6Bo {
+    grid-row: 1 !important;
+    grid-column: 7 / 29 !important;
+  }
+
+  .Header-module__root_large__n2msR .Header-module__button__Sg5LL {
+    grid-row: 1 !important;
+  }
+
+  .Header-module__root_large__n2msR .Header-module__button_cta__IQo0- {
+    grid-column: 30 / -1 !important;
+  }
+}
