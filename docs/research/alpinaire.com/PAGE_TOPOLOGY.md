@@ -1,4 +1,4 @@
-# Alter Geneva Page Topology
+# Alpinaire Page Topology
 
 1. Fixed header with menu button, centered logo, and `Your project` CTA.
 2. Hero with `GENEVA` baseline, surtitle, H1, and full-height watch image.

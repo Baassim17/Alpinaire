@@ -1,8 +1,8 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-const SITE_ORIGIN = "https://www.altergeneva.com";
-const API_ORIGIN = "https://api.altergeneva.com";
+const SITE_ORIGIN = "https://alpinaire.com";
+const API_ORIGIN = "https://api.alpinaire.com";
 const HOMEPAGE_API_URL = `${API_ORIGIN}/api/homepage?populate=deep`;
 const ROOT = process.cwd();
 
@@ -10,7 +10,7 @@ const homeUrl = `${SITE_ORIGIN}/`;
 const randomUrl = `${API_ORIGIN}/api/random`;
 
 const assetPattern =
-  /https:\/\/api\.altergeneva\.com\/uploads\/[^\s"'()<>]+|https:\/\/www\.altergeneva\.com\/(?:index-[^\s"'()<>]+\.(?:css|js)|index-legacy-[^\s"'()<>]+\.js|polyfills-legacy-[^\s"'()<>]+\.js|favicon\/[^\s"'()<>]+|share_image\.jpg|UCity[^\s"'()<>]+\.woff2|Zodiak[^\s"'()<>]+\.woff2)|\/(?:uploads\/[^\s"'()<>]+|index-[^\s"'()<>]+\.(?:css|js)|index-legacy-[^\s"'()<>]+\.js|polyfills-legacy-[^\s"'()<>]+\.js|favicon\/[^\s"'()<>]+|share_image\.jpg|UCity[^\s"'()<>]+\.woff2|Zodiak[^\s"'()<>]+\.woff2)/g;
+  /https:\/\/api\.alpinaire\.com\/uploads\/[^\s"'()<>]+|https:\/\/www\.alpinaire\.com\/(?:index-[^\s"'()<>]+\.(?:css|js)|index-legacy-[^\s"'()<>]+\.js|polyfills-legacy-[^\s"'()<>]+\.js|favicon\/[^\s"'()<>]+|share_image\.jpg|UCity[^\s"'()<>]+\.woff2|Zodiak[^\s"'()<>]+\.woff2)|\/(?:uploads\/[^\s"'()<>]+|index-[^\s"'()<>]+\.(?:css|js)|index-legacy-[^\s"'()<>]+\.js|polyfills-legacy-[^\s"'()<>]+\.js|favicon\/[^\s"'()<>]+|share_image\.jpg|UCity[^\s"'()<>]+\.woff2|Zodiak[^\s"'()<>]+\.woff2)/g;
 
 const ensureDir = async (filePath) => {
   await mkdir(path.dirname(filePath), { recursive: true });
@@ -45,11 +45,11 @@ const fetchBinary = async (url) => {
 };
 
 const normalizeAssetUrl = (value) => {
-  if (value.startsWith("https://api.altergeneva.com/uploads/")) {
+  if (value.startsWith("https://api.alpinaire.com/uploads/")) {
     return value.replace(API_ORIGIN, "");
   }
 
-  if (value.startsWith("https://www.altergeneva.com/")) {
+  if (value.startsWith("https://alpinaire.com/")) {
     return value.replace(SITE_ORIGIN, "");
   }
 
@@ -114,8 +114,8 @@ const rewriteAssetHosts = (value) =>
 const runtimeInterceptor = `<script>
 (() => {
   const localMap = new Map([
-    ["${API_ORIGIN}/api/random", "/altergeneva/random.json"],
-    ["${API_ORIGIN}/api/homepage?populate=deep", "/altergeneva/homepage.json"]
+    ["${API_ORIGIN}/api/random", "/alpinaire/random.json"],
+    ["${API_ORIGIN}/api/homepage?populate=deep", "/alpinaire/homepage.json"]
   ]);
   const nativeFetch = window.fetch.bind(window);
   window.fetch = async (input, init) => {
@@ -216,17 +216,17 @@ const main = async () => {
     );
   }
 
-  const homeDataPath = path.join(ROOT, "src", "data", "altergeneva", "home.json");
+  const homeDataPath = path.join(ROOT, "src", "data", "alpinaire", "home.json");
   const randomDataPath = path.join(
     ROOT,
     "public",
-    "altergeneva",
+    "alpinaire",
     "random.json"
   );
   const homepageDataPath = path.join(
     ROOT,
     "public",
-    "altergeneva",
+    "alpinaire",
     "homepage.json"
   );
   const legacyUCityLightPath = path.join(
@@ -253,10 +253,10 @@ const main = async () => {
   const staticHtmlPath = path.join(
     ROOT,
     "public",
-    "altergeneva",
+    "alpinaire",
     "index.html"
   );
-  const appCssPath = path.join(ROOT, "src", "app", "altergeneva.css");
+  const appCssPath = path.join(ROOT, "src", "app", "alpinaire.css");
 
   await ensureDir(homeDataPath);
   await ensureDir(randomDataPath);
@@ -303,7 +303,7 @@ const main = async () => {
     );
   }
 
-  console.log(`Downloaded ${assetList.length} mirrored assets for Alter Geneva.`);
+  console.log(`Downloaded ${assetList.length} mirrored assets for Alpinaire.`);
 };
 
 main().catch((error) => {

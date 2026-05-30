@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Alpinaire",
   description:
     "Alpinaire, the bespoke watchmaking studio. The ultimate luxury: making time your own",
-  metadataBase: new URL("https://www.altergeneva.com"),
+  metadataBase: new URL("https://alpinaire.com"),
   icons: {
     apple: "/favicon/apple-touch-icon.png",
     icon: [
