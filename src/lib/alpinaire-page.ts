@@ -55,7 +55,7 @@ function buildMeta(meta?: StrapiMeta) {
   return {
     title: meta?.title || "Alpinaire",
     description: meta?.description || defaultDescription,
-    imageUrl: meta?.image?.data?.attributes?.url || "https://alpinaire.com/share_image.jpg",
+    imageUrl: meta?.image?.data?.attributes?.url || "https://alpinaire.com/share_image.webp",
     canonical: meta?.canonicalUrl,
   };
 }

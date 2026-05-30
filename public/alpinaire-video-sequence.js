@@ -2,8 +2,8 @@
   var sectionSelector = ".HomeTextVisuals-module__root__uk8v4";
   var videoSelector = ".HomeTextVisuals-module__mediaVideo__-n-lb";
   var sources = [
-    "/videos/Artisan_assembling.mp4",
-    "/videos/Artisan_packaging.mp4"
+    "/videos/Artisan_assembling.webm",
+    "/videos/Artisan_packaging.webm"
   ];
   var retryCount = 0;
 

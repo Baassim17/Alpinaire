@@ -15,7 +15,7 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  background-image: url("/images/Alpinaire%20logo.png");
+  background-image: url("/images/Alpinaire%20logo.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -23,12 +23,12 @@ body {
 
 /* Light theme black logo */
 .LogoHeader-module__root_light__k2-Kg .Logo-module__root__FNsq2::before {
-  background-image: url("/images/Alpinaire%20logo_blk.png") !important;
+  background-image: url("/images/Alpinaire%20logo_blk.webp") !important;
 }
 
 /* Dark theme white logo */
 .LogoHeader-module__root_dark__jvgVo .Logo-module__root__FNsq2::before {
-  background-image: url("/images/Alpinaire%20logo.png") !important;
+  background-image: url("/images/Alpinaire%20logo.webp") !important;
 }
 
 .Header-module__logo__Yh6Bo .Logo-module__root__FNsq2 {
