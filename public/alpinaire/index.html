@@ -22,7 +22,37 @@
     ["https://api.alpinaire.com/api/random", "/alpinaire/random.json"],
     ["/api/random", "/alpinaire/random.json"],
     ["https://api.alpinaire.com/api/homepage?populate=deep", "/alpinaire/homepage.json"],
-    ["/api/homepage?populate=deep", "/alpinaire/homepage.json"]
+    ["/api/homepage?populate=deep", "/alpinaire/homepage.json"],
+    ["/api/service?populate=deep", "/alpinaire/api/service__populate_deep.json"],
+    ["/api/projects-listing?populate=deep", "/alpinaire/api/projects-listing__populate_deep.json"],
+    ["/api/projects-listing?populate=deep&pagination[page]=1", "/alpinaire/api/projects-listing__populate_deep__page_1.json"],
+    ["/api/projects-listing?populate=deep&pagination[page]=2", "/alpinaire/api/projects-listing__populate_deep__page_2.json"],
+    ["/api/projects-listing?pagination[page]=1", "/alpinaire/api/projects-listing__populate_deep__page_1.json"],
+    ["/api/projects-listing?pagination[page]=2", "/alpinaire/api/projects-listing__populate_deep__page_2.json"],
+    ["/api/projects-listing?pagination[page]=1&populate=deep", "/alpinaire/api/projects-listing__populate_deep__page_1.json"],
+    ["/api/projects-listing?pagination[page]=2&populate=deep", "/alpinaire/api/projects-listing__populate_deep__page_2.json"],
+    ["/api/warrantie?populate=deep", "/alpinaire/api/warrantie__populate_deep.json"],
+    ["/api/faq?populate=deep", "/alpinaire/api/faq__populate_deep.json"],
+    ["/api/contact?populate=deep", "/alpinaire/api/contact__populate_deep.json"],
+    ["/api/legal?populate=deep", "/alpinaire/api/legal__populate_deep.json"],
+    ["/api/legal-notice?populate=deep", "/alpinaire/api/legal-notice__populate_deep.json"],
+    ["/api/cookie?populate=deep", "/alpinaire/api/cookie__populate_deep.json"],
+    ["/api/term-of-use?populate=deep", "/alpinaire/api/term-of-use__populate_deep.json"],
+    ["/api/term-and-condition?populate=deep", "/alpinaire/api/term-and-condition__populate_deep.json"],
+    ["/api/not-found?populate=deep", "/alpinaire/api/not-found__populate_deep.json"],
+    ["/api/projects/?filters[slug]=NO.182&populate=deep", "/alpinaire/api/project__slug__NO.182.json"],
+    ["/api/projects/?filters[slug]=NO.306&populate=deep", "/alpinaire/api/project__slug__NO.306.json"],
+    ["/api/projects/?filters[slug]=project-016&populate=deep", "/alpinaire/api/project__slug__project-016.json"],
+    ["/api/projects/?filters[slug]=project-014&populate=deep", "/alpinaire/api/project__slug__project-014.json"],
+    ["/api/projects/?filters[slug]=project-011&populate=deep", "/alpinaire/api/project__slug__project-011.json"],
+    ["/api/projects/?filters[slug]=project-009&populate=deep", "/alpinaire/api/project__slug__project-009.json"],
+    ["/api/projects/?filters[slug]=project-007&populate=deep", "/alpinaire/api/project__slug__project-007.json"],
+    ["/api/projects/?filters[slug]=Project-006&populate=deep", "/alpinaire/api/project__slug__Project-006.json"],
+    ["/api/projects/?filters[slug]=Project-005&populate=deep", "/alpinaire/api/project__slug__Project-005.json"],
+    ["/api/projects/?filters[slug]=Project-004&populate=deep", "/alpinaire/api/project__slug__Project-004.json"],
+    ["/api/projects/?filters[slug]=Project-003&populate=deep", "/alpinaire/api/project__slug__Project-003.json"],
+    ["/api/projects/?filters[slug]=Project-002&populate=deep", "/alpinaire/api/project__slug__Project-002.json"],
+    ["/api/projects/?filters[slug]=Project-001&populate=deep", "/alpinaire/api/project__slug__Project-001.json"]
   ]);
   const nativeFetch = window.fetch.bind(window);
   window.fetch = async (input, init) => {
@@ -32,8 +62,19 @@
         : input instanceof Request
           ? input.url
           : String(input);
-    if (localMap.has(url)) {
-      const response = await nativeFetch(localMap.get(url), init);
+    const normalizedUrl = url.replaceAll("%5B", "[").replaceAll("%5D", "]");
+    const pathnameUrl = normalizedUrl.startsWith(location.origin)
+      ? normalizedUrl.slice(location.origin.length)
+      : normalizedUrl;
+    const apiPathUrl = pathnameUrl
+      .replace(/^https:\/\/api\.alpinaire\.com\/api/, "/api");
+    const mappedUrl =
+      localMap.get(url) ||
+      localMap.get(normalizedUrl) ||
+      localMap.get(pathnameUrl) ||
+      localMap.get(apiPathUrl);
+    if (mappedUrl) {
+      const response = await nativeFetch(mappedUrl, init);
       return new Response(await response.text(), {
         status: response.status,
         statusText: response.statusText,
@@ -43,4 +84,4 @@
     return nativeFetch(input, init);
   };
 })();
-</script><script type="module" crossorigin src="/index-Cf95Hpzn.js?v=alpinaire-assets-2"></script><script src="/alpinaire-video-sequence.js?v=6" defer></script></body></html>
+</script><style id="alpinaire-hero-reveal-start">.HomeHero-module__background__-bq4K{opacity:0}.HomeHero-module__backgroundWrapper__6--iy{transform:scale(1.09);clip-path:inset(7%)}@media (prefers-reduced-motion:reduce){.HomeHero-module__background__-bq4K{opacity:1}.HomeHero-module__backgroundWrapper__6--iy{transform:none;clip-path:inset(0%)}}</style><script type="module" crossorigin src="/index-Cf95Hpzn.js?v=alpinaire-hero-3"></script><script src="/alpinaire-hero-reveal.js?v=1" defer></script><script src="/alpinaire-video-sequence.js?v=6" defer></script></body></html>

@@ -1,10 +1,7 @@
-import { readFile } from "node:fs/promises";
-import path from "node:path";
-
-const htmlPath = path.join(process.cwd(), "public", "alpinaire", "index.html");
+import { renderAlpinairePage } from "@/lib/alpinaire-page";
 
 export async function GET() {
-  const html = await readFile(htmlPath, "utf8");
+  const html = await renderAlpinairePage("/");
 
   return new Response(html, {
     headers: {
