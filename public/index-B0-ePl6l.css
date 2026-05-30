@@ -6,6 +6,27 @@
 /* Alpinaire footer legal links removal */
 .LegalInfos-module__list__mTmYH{display:none!important}
 
+/* Alpinaire footer redesign */
+.Footer-module__root__oib9b{position:relative;overflow:hidden;padding-top:92rem!important;padding-bottom:72rem!important;background:linear-gradient(180deg,#050505 0%,#000 48%,#050505 100%)!important;color:var(--color-white);border-top:1px solid rgba(255,255,255,.18)}
+.Footer-module__root__oib9b:before{content:"";position:absolute;top:34rem;left:50%;width:min(720rem,78vw);aspect-ratio:1431/198;transform:translateX(-50%);background:url("/images/Alpinaire%20logo.png") center/contain no-repeat;opacity:.055;pointer-events:none}
+.Footer-module__root__oib9b:after{content:"";position:absolute;top:0;left:calc(100% / var(--grid-columns) * var(--grid--columns-margin));right:calc(100% / var(--grid-columns) * var(--grid--columns-margin));height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.72),transparent);opacity:.48;pointer-events:none}
+.Footer-module__wrapper__yu-p6{position:relative;row-gap:56rem!important;align-items:start}
+.Footer-module__navigation__CWRw2{grid-column:1/-1!important;padding-top:46rem}
+.FooterNavigation-module__list__Aa9qS{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:16rem 28rem;margin:0!important}
+.FooterNavigation-module__item__6TkOn{width:auto!important;padding-right:0!important}
+.FooterNavigation-module__link__j7Y-c,.Socials-module__link__1NjTr{position:relative;display:inline-flex;width:fit-content;padding:0!important;font-size:12rem!important;line-height:1.15!important;letter-spacing:0!important;text-transform:uppercase;transition:opacity .35s var(--ease-sine-out),transform .45s var(--ease-power2-out)}
+.FooterNavigation-module__link__j7Y-c:after,.Socials-module__link__1NjTr:after{content:"";position:absolute;left:0;right:0;bottom:-5rem;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .45s var(--ease-power3-out);opacity:.78}
+.Socials-module__title__swn8k{font-size:10rem!important;letter-spacing:.08em;color:rgba(255,255,255,.5)}
+.Socials-module__list__GTu1a{display:flex;flex-direction:column;gap:16rem;margin:18rem 0 0!important}
+.Footer-module__socials__uRfDO{grid-column:1/-1!important}
+.Footer-module__infos__KvRzd{grid-column:1/-1!important;padding-top:32rem;border-top:1px solid rgba(255,255,255,.14)}
+.LegalInfos-module__copyright__GrXBv{font-size:11rem!important;letter-spacing:.02em}
+.LegalInfos-module__notice__2REvn{margin-top:28rem!important;color:rgba(255,255,255,.42)!important;font-size:10rem!important;line-height:1.55!important;max-width:980rem}
+.LegalInfos-module__notice__2REvn a{color:rgba(255,255,255,.62)}
+@media (hover:hover){.FooterNavigation-module__link__j7Y-c:hover,.Socials-module__link__1NjTr:hover{opacity:.72;transform:translate3d(6rem,0,0)}.FooterNavigation-module__link__j7Y-c:hover:after,.Socials-module__link__1NjTr:hover:after{transform:scaleX(1);transform-origin:left}}
+@media (min-width:768px) and (min-height:500px) and (orientation:landscape){.Footer-module__root__oib9b{padding-top:112rem!important;padding-bottom:78rem!important}.Footer-module__root__oib9b:before{top:40rem;width:min(900rem,64vw)}.Footer-module__wrapper__yu-p6{row-gap:72rem!important}.Footer-module__navigation__CWRw2{grid-column:1/18!important;padding-top:76rem}.FooterNavigation-module__list__Aa9qS{grid-template-columns:repeat(2,minmax(0,1fr));gap:20rem 84rem}.FooterNavigation-module__link__j7Y-c,.Socials-module__link__1NjTr{font-size:13rem!important}.Footer-module__socials__uRfDO{grid-column:31/-1!important;padding-top:76rem}.Socials-module__title__swn8k{font-size:11rem!important}.Footer-module__infos__KvRzd{padding-top:42rem}.LegalInfos-module__copyright__GrXBv{grid-column:1/12!important;grid-row:1;font-size:12rem!important}.LegalInfos-module__notice__2REvn{grid-column:15/-1!important;grid-row:1;margin-top:0!important;max-width:none;font-size:10rem!important}}
+@media (max-width:767px),(max-height:499px){.Footer-module__root__oib9b{padding-top:76rem!important;padding-bottom:56rem!important}.Footer-module__root__oib9b:before{top:28rem;width:86vw}.FooterNavigation-module__list__Aa9qS{grid-template-columns:1fr;gap:16rem}.Footer-module__navigation__CWRw2{padding-top:40rem}.Footer-module__infos__KvRzd{padding-top:28rem}.LegalInfos-module__notice__2REvn{margin-top:24rem!important}}
+
 /* Alpinaire hero media fallback */
 
 
